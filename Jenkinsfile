@@ -1,5 +1,6 @@
 node() {
     docker.image('maven:3.8.1-adoptopenjdk-11').inside {
+        checkout scm
         git '/home/Documents/Belajar_Implementasi_CICD/Jenkins/submission-cicd-pipeline-yuukinaesa'
         
         stage('Building') {
